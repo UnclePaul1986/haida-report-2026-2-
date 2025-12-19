@@ -18,169 +18,91 @@
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            padding-bottom: 80px; /* 为底部按钮留空 */
+            margin: 0; padding: 0;
+            background-color: var(--bg-dark); color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.6; padding-bottom: 80px;
         }
 
-        .container {
-            padding: 20px;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
+        .container { padding: 20px; max-width: 100%; box-sizing: border-box; }
 
-        /* 标题区 */
+        /* 头部 */
         header {
-            text-align: center;
-            padding: 40px 0 20px 0;
+            text-align: center; padding: 40px 0 20px 0;
             background: linear-gradient(180deg, rgba(52,152,219,0.2) 0%, rgba(18,18,18,0) 100%);
         }
         h1 { font-size: 1.8rem; margin: 0; line-height: 1.3; }
         .subtitle { color: var(--primary); font-size: 1rem; margin-top: 10px; font-weight: bold; }
-        .tagline { color: var(--text-sub); font-size: 0.9rem; margin-top: 5px; }
 
-        /* 卡片通用样式 */
+        /* 卡片通用 */
         .section-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            background: var(--card-bg); border-radius: 12px; padding: 20px;
+            margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             border: 1px solid rgba(255,255,255,0.05);
         }
 
         h2 {
-            font-size: 1.3rem;
-            color: var(--gold);
-            border-left: 4px solid var(--primary);
-            padding-left: 10px;
-            margin-top: 0;
-            margin-bottom: 20px;
+            font-size: 1.3rem; color: var(--gold);
+            border-left: 4px solid var(--primary); padding-left: 10px;
+            margin: 0 0 20px 0;
         }
 
-        /* 痛点卡片（垂直堆叠） */
+        /* 痛点样式 */
         .pain-point {
-            display: flex;
-            align-items: center;
-            background: rgba(255,255,255,0.05);
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
+            display: flex; align-items: center; background: rgba(255,255,255,0.05);
+            padding: 15px; border-radius: 8px; margin-bottom: 10px;
         }
         .pain-icon { font-size: 2rem; margin-right: 15px; min-width: 40px; }
-        .pain-content h3 { margin: 0; font-size: 1rem; color: var(--text-main); }
+        .pain-content h3 { margin: 0; font-size: 1rem; }
         .pain-content p { margin: 5px 0 0 0; font-size: 0.85rem; color: var(--text-sub); }
 
-        /* 公式区域 */
-        .formula-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
+        /* 公式样式 */
+        .formula-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
         .formula-item {
-            text-align: center;
-            background: rgba(52, 152, 219, 0.1);
-            padding: 10px;
-            border-radius: 8px;
-            flex: 1;
-            margin: 0 5px;
+            text-align: center; background: rgba(52, 152, 219, 0.1);
+            padding: 10px; border-radius: 8px; flex: 1; margin: 0 5px;
         }
         .formula-item span { display: block; font-size: 0.75rem; color: var(--text-sub); margin-top: 4px; }
         .plus { color: var(--gold); font-weight: bold; }
 
-        /* 表格区域 (横向滚动) */
+        /* 表格样式 */
         .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
         table { width: 100%; min-width: 500px; border-collapse: collapse; font-size: 0.85rem; }
-        th { text-align: left; color: var(--primary); border-bottom: 1px solid #333; padding: 10px; white-space: nowrap;}
+        th { text-align: left; color: var(--primary); border-bottom: 1px solid #333; padding: 10px; white-space: nowrap; }
         td { border-bottom: 1px solid #333; padding: 10px; vertical-align: top; }
-        .rule-plus { color: var(--green); display: block; margin-bottom: 2px; }
+        .rule-plus { color: var(--green); display: block; }
         .rule-minus { color: var(--red); display: block; }
 
         /* PK对比 */
-        .pk-box {
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
+        .pk-box { padding: 15px; border-radius: 8px; margin-bottom: 15px; }
         .pk-old { background: rgba(127, 140, 141, 0.1); border-left: 3px solid #7f8c8d; }
         .pk-new { background: rgba(46, 204, 113, 0.1); border-left: 3px solid #2ecc71; }
-        .pk-title { font-weight: bold; margin-bottom: 8px; display: block; font-size: 1rem; }
-        .pk-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: var(--text-sub); }
-        .pk-list li { margin-bottom: 4px; }
+        .pk-title { font-weight: bold; margin-bottom: 8px; display: block; }
+        .pk-list { padding-left: 20px; margin: 0; font-size: 0.9rem; color: var(--text-sub); }
 
         /* 图表容器 */
-        .chart-container {
-            position: relative;
-            height: 250px; /* 适合手机的高度 */
-            width: 100%;
-            margin-top: 10px;
-        }
+        .chart-container { position: relative; height: 250px; width: 100%; margin-top: 15px; }
 
         /* 模拟器按钮 */
-        .sim-controls {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
+        .sim-controls { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 15px; }
         .sim-btn {
-            background: transparent;
-            border: 1px solid #555;
-            color: #aaa;
-            padding: 8px 0;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            cursor: pointer;
+            background: transparent; border: 1px solid #555; color: #aaa;
+            padding: 8px 0; border-radius: 6px; font-size: 0.8rem; cursor: pointer;
         }
-        .sim-btn.active {
-            border-color: var(--gold);
-            color: var(--bg-dark);
-            background: var(--gold);
-            font-weight: bold;
-        }
+        .sim-btn.active { border-color: var(--gold); color: var(--bg-dark); background: var(--gold); font-weight: bold; }
 
-        /* 结论区 */
-        .conclusion-box {
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.2) 0%, rgba(46, 204, 113, 0) 100%);
-            border: 1px solid var(--green);
-        }
-
-        /* 悬浮按钮 */
+        /* 结论与悬浮按钮 */
+        .conclusion-box { background: linear-gradient(135deg, rgba(46, 204, 113, 0.2) 0%, rgba(46, 204, 113, 0) 100%); border: 1px solid var(--green); }
         .fab {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--primary);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            font-size: 1.5rem;
-            text-decoration: none;
-            z-index: 1000;
+            position: fixed; bottom: 20px; right: 20px; background: var(--primary);
+            color: white; width: 50px; height: 50px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5); text-decoration: none; font-size: 1.5rem; z-index: 1000;
         }
 
-        /* 动画类 (简化版，减少手机性能消耗) */
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
+        /* 动画 */
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
@@ -189,13 +111,12 @@
         <div class="container">
             <h1>2026 薪酬改革方案</h1>
             <div class="subtitle">KSF 全绩效模式解析</div>
-            <div class="tagline">打破存量博弈 · 激活经营意识</div>
         </div>
     </header>
 
     <div class="container">
 
-        <!-- 1. 痛点分析 -->
+        <!-- 1. 痛点 -->
         <div class="section-card reveal">
             <h2>为什么必须改？</h2>
             <div class="pain-point">
@@ -212,169 +133,150 @@
                     <p>分红预发雷打不动，业绩好坏一个样。</p>
                 </div>
             </div>
-            <div class="pain-point">
-                <div class="pain-icon">💣</div>
-                <div class="pain-content">
-                    <h3>风险失控</h3>
-                    <p>只管卖不管回款，长账龄坏账无人负责。</p>
-                </div>
-            </div>
         </div>
 
-        <!-- 2. KSF 公式 -->
+        <!-- 2. 公式 -->
         <div class="section-card reveal">
             <h2>薪酬怎么算？</h2>
             <div class="formula-row">
-                <div class="formula-item">
-                    5000
-                    <span>分红预发</span>
-                </div>
+                <div class="formula-item">5000<span>分红预发</span></div>
                 <div class="plus">+</div>
-                <div class="formula-item" style="border: 1px solid var(--gold); color:var(--gold)">
-                    8000
-                    <span>KSF绩效</span>
-                </div>
+                <div class="formula-item" style="border:1px solid var(--gold); color:var(--gold)">8000<span>KSF绩效</span></div>
                 <div class="plus">=</div>
-                <div class="formula-item">
-                    1.3万
-                    <span>基准薪资</span>
-                </div>
+                <div class="formula-item">1.3万<span>基准薪资</span></div>
             </div>
-            <p style="font-size:0.9rem; color:#ccc; margin-top:15px; text-align:justify;">
-                <strong style="color:var(--gold)">核心逻辑：</strong><br>
-                设定平衡点（盈亏线），超过平衡点即奖励（上不封顶），低于平衡点即少发。
+            <p style="font-size:0.9rem; color:#ccc; margin-top:10px;">
+                <strong style="color:var(--gold)">核心逻辑：</strong> 超过平衡点即奖励（上不封顶），低于平衡点即少发。
             </p>
         </div>
 
-        <!-- 3. 指标表格 -->
+        <!-- 3. 指标 -->
         <div class="section-card reveal">
             <h2>5大关键指标详解</h2>
             <div class="table-scroll">
                 <table>
                     <thead>
-                        <tr>
-                            <th>指标 (权重)</th>
-                            <th>目标值</th>
-                            <th>奖罚机制</th>
-                        </tr>
+                        <tr><th>指标 (权重)</th><th>目标值</th><th>奖罚机制</th></tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong style="color:var(--gold)">毛利润 (30%)</strong></td>
                             <td>50万</td>
-                            <td>
-                                <span class="rule-plus">▲ 增1万奖100</span>
-                                <span class="rule-minus">▼ 减1万扣50</span>
-                            </td>
+                            <td><span class="rule-plus">▲ 增1万奖100</span><span class="rule-minus">▼ 减1万扣50</span></td>
                         </tr>
                         <tr>
                             <td><strong>销售额 (30%)</strong></td>
                             <td>330万</td>
-                            <td>
-                                <span class="rule-plus">▲ 增2万奖60</span>
-                                <span class="rule-minus">▼ 减2万扣30</span>
-                            </td>
+                            <td><span class="rule-plus">▲ 增2万奖60</span><span class="rule-minus">▼ 减2万扣30</span></td>
                         </tr>
                         <tr>
                             <td>收现率 (20%)</td>
                             <td>90%</td>
-                            <td>
-                                <span class="rule-plus">▲ 增1%奖50</span>
-                                <span class="rule-minus">▼ 减1%扣40</span>
-                            </td>
+                            <td><span class="rule-plus">▲ 增1%奖50</span><span class="rule-minus">▼ 减1%扣40</span></td>
                         </tr>
                         <tr>
                             <td>历史应收 (10%)</td>
                             <td>15%</td>
-                            <td>
-                                <span class="rule-plus">▲ 降1%奖50</span>
-                                <span class="rule-minus">▼ 升1%扣50</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>团队培养 (10%)</td>
-                            <td>0人</td>
-                            <td>
-                                <span class="rule-plus">▲ 过1人奖300</span>
-                                <span class="rule-minus">▼ 不过扣200</span>
-                            </td>
+                            <td><span class="rule-plus">▲ 降1%奖50</span><span class="rule-minus">▼ 升1%扣50</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p style="font-size:0.8rem; color:#666; margin-top:10px;">*左右滑动查看完整表格</p>
+            <p style="font-size:0.8rem; color:#666; margin-top:5px;">*左右滑动查看</p>
         </div>
 
-        <!-- 4. PK 对比 -->
+        <!-- 4. PK -->
         <div class="section-card reveal">
             <h2>新旧模式 PK</h2>
             <div class="pk-box pk-old">
                 <span class="pk-title" style="color:#bdc3c7">🔴 传统 KPI</span>
-                <ul class="pk-list">
-                    <li>导向：完成任务指标</li>
-                    <li>上限：有封顶 (死工资)</li>
-                    <li>动力：讨价还价，被动执行</li>
-                </ul>
+                <ul class="pk-list"><li>导向：完成任务指标</li><li>上限：有封顶 (死工资)</li></ul>
             </div>
             <div class="pk-box pk-new">
                 <span class="pk-title" style="color:#2ecc71">🟢 KSF 全绩效</span>
-                <ul class="pk-list">
-                    <li>导向：创造利润 (帮公司赚钱)</li>
-                    <li>上限：上不封顶 (多劳多得)</li>
-                    <li>动力：自己算账，主动出击</li>
-                </ul>
+                <ul class="pk-list"><li>导向：创造利润 (帮公司赚钱)</li><li>上限：上不封顶 (多劳多得)</li></ul>
             </div>
         </div>
 
-        <!-- 5. 2026 模拟器 -->
+        <!-- 5. 2025 数据复盘 (新增板块) -->
+        <div class="section-card reveal">
+            <h2>📊 2025 数据复盘</h2>
+            <p style="font-size:0.9rem; color:#ccc; margin-bottom:10px;">
+                如果2025年就用这套模式，结果如何？<br>
+                <span style="color:var(--text-sub); font-size:0.8rem;">(蓝色柱=业绩，红色线=KSF薪酬)</span>
+            </p>
+            <div class="chart-container">
+                <canvas id="chart2025"></canvas>
+            </div>
+            <p style="font-size:0.85rem; color:#aaa; margin-top:10px; background:rgba(255,255,255,0.05); padding:8px; border-radius:5px;">
+                <strong>💡 分析：</strong><br>
+                1月业绩低，薪酬自动降至5k；<br>
+                6月业绩旺，薪酬飙升至1.1万。<br>
+                证明：薪酬与业绩实现<strong>强关联</strong>。
+            </p>
+        </div>
+
+        <!-- 6. 2026 预测 -->
         <div class="section-card reveal">
             <h2>💰 2026 收入预测</h2>
-            <p style="font-size:0.9rem; color:#ccc; margin-bottom:10px;">点击下方按钮切换情景：</p>
-            
+            <p style="font-size:0.9rem; color:#ccc; margin-bottom:10px;">点击切换情景：</p>
             <div class="sim-controls">
                 <button class="sim-btn" onclick="updateSim('flat', this)">业绩持平</button>
                 <button class="sim-btn active" onclick="updateSim('growth', this)">增长25%</button>
                 <button class="sim-btn" onclick="updateSim('super', this)">增长50%</button>
             </div>
-
             <h3 id="simText" style="text-align:center; color:var(--gold); margin: 10px 0;">月均: 9,399 元</h3>
-
             <div class="chart-container">
                 <canvas id="chartSim"></canvas>
             </div>
         </div>
 
-        <!-- 6. 结论 -->
+        <!-- 7. 结论 -->
         <div class="section-card conclusion-box reveal">
             <h2>结论与建议</h2>
-            <p style="color:var(--text-main);">综合评估，建议实施 <strong>【方案 A】</strong>。</p>
-            <ul style="font-size:0.9rem; color:var(--text-main); padding-left:20px;">
-                <li><strong>过渡期：</strong>1-3月薪酬保底，平稳过渡。</li>
-                <li><strong>战略目标：</strong>支撑1.7亿销售目标。</li>
-                <li><strong>预期收益：</strong>员工增收20%，公司增利10万+。</li>
+            <p style="color:var(--text-main);">建议实施 <strong>【方案 A】</strong>。</p>
+            <ul style="font-size:0.9rem; padding-left:20px;">
+                <li><strong>过渡期：</strong>1-3月薪酬保底。</li>
+                <li><strong>预期：</strong>员工增收20%，公司增利10万+。</li>
             </ul>
         </div>
 
     </div>
 
-    <!-- 悬浮回到顶部按钮 -->
     <a href="#" class="fab" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">↑</a>
 
     <script>
-        // === 滚动动画 ===
+        // === 动画观察器 ===
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // === 图表逻辑 ===
         const months = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
-        
+
+        // === 1. 渲染 2025 复盘图表 ===
+        const ctx2025 = document.getElementById('chart2025').getContext('2d');
+        new Chart(ctx2025, {
+            type: 'bar',
+            data: {
+                labels: months.slice(0,11), // 1-11月数据
+                datasets: [
+                    { label: '业绩(万)', data: [46, 259, 340, 246, 374, 388, 257, 216, 315, 327, 255], backgroundColor: '#3498db', yAxisID: 'y' },
+                    { label: '薪酬(元)', data: [5120, 6838, 8969, 6596, 10438, 11221, 7164, 6301, 7660, 8086, 7050], type:'line', borderColor: '#e74c3c', borderWidth: 2, pointRadius:2, yAxisID: 'y1' }
+                ]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { display: false } }, // 隐藏图例以节省空间
+                scales: {
+                    x: { ticks: { color: '#888', font:{size:10} }, grid:{display:false} },
+                    y: { position:'left', ticks:{color:'#888', font:{size:10}}, grid:{color:'rgba(255,255,255,0.05)'} },
+                    y1: { position:'right', ticks:{color:'#e74c3c', font:{size:10}}, grid:{display:false} }
+                }
+            }
+        });
+
+        // === 2. 渲染 2026 预测图表 ===
         let chartSimInstance = null;
         const simData = {
             flat: {
@@ -394,40 +296,24 @@
             }
         };
 
-        function renderChart() {
+        function renderSimChart() {
             const ctx = document.getElementById('chartSim').getContext('2d');
             chartSimInstance = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: months,
                     datasets: [
-                        { 
-                            label: '业绩(万)', 
-                            data: simData.growth.sales, 
-                            backgroundColor: '#3498db', 
-                            yAxisID: 'y' 
-                        },
-                        { 
-                            label: '薪酬(元)', 
-                            data: simData.growth.salary, 
-                            type:'line', 
-                            borderColor: '#f1c40f', 
-                            borderWidth: 2, 
-                            pointRadius: 2,
-                            yAxisID: 'y1' 
-                        }
+                        { label: '业绩', data: simData.growth.sales, backgroundColor: '#3498db', yAxisID: 'y' },
+                        { label: '薪酬', data: simData.growth.salary, type:'line', borderColor: '#f1c40f', borderWidth: 2, pointRadius:2, yAxisID: 'y1' }
                     ]
                 },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { 
-                        legend: { labels: { color: '#ccc', font: {size: 10} } } 
-                    },
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
                     scales: {
-                        x: { ticks: { color: '#888', font: {size: 10} }, grid: { display: false } },
-                        y: { position: 'left', ticks: { color: '#888', font: {size: 10} }, grid: { color: 'rgba(255,255,255,0.05)' } },
-                        y1: { position: 'right', ticks: { color: '#f1c40f', font: {size: 10} }, grid: { display: false } }
+                        x: { ticks: { color: '#888', font:{size:10} }, grid:{display:false} },
+                        y: { position:'left', ticks:{color:'#888', font:{size:10}}, grid:{color:'rgba(255,255,255,0.05)'} },
+                        y1: { position:'right', ticks:{color:'#f1c40f', font:{size:10}}, grid:{display:false} }
                     }
                 }
             });
@@ -436,18 +322,14 @@
         function updateSim(type, btn) {
             document.querySelectorAll('.sim-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            
             const data = simData[type];
             chartSimInstance.data.datasets[0].data = data.sales;
             chartSimInstance.data.datasets[1].data = data.salary;
             chartSimInstance.update();
-            
             document.getElementById('simText').innerText = `月均: ${data.avg} 元`;
         }
 
-        // 初始化
-        renderChart();
-
+        renderSimChart();
     </script>
 </body>
 </html>
